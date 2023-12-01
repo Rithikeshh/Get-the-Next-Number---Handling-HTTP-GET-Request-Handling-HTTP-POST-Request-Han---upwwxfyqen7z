@@ -10,10 +10,10 @@ app.use(express.json());
 app.get("/api/get-next-num", (req, res)=>{
     const {num} = req.body;
 
-    if(!isNaN(num)){
-        return res.status(200).json({"message": +num+1, "status": "success"});
-    }
-    res.status(400).send({status: "failure"})
+    
+        res.status(200).json({"message": +num+1, "status": "success"});
+    
+    // res.status(400).send({status: "failure"})
 
 })
 module.exports = app;
